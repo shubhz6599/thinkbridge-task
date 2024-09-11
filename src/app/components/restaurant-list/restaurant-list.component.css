@@ -1,0 +1,28 @@
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.btn-primary {
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-info {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-danger {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}

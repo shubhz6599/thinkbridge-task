@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0">Restaurant List</h2>
+    <a class="btn btn-primary btn-lg" [routerLink]="['/add']">Add Restaurant</a>
+  </div>
+
+  <!-- Search Input Field -->
+  <div class="form-group mb-3">
+    <input type="text" class="form-control" placeholder="Search by name..." [(ngModel)]="searchTerm" />
+  </div>
+
+
+  <table class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Location</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let restaurant of filteredRestaurants()">
+        <td>{{ restaurant.name }}</td>
+        <td>{{ restaurant.description }}</td>
+        <td>{{ restaurant.location }}</td>
+        <td>
+          <button class="btn btn-info btn-sm me-2" [routerLink]="['/edit', restaurant.id]">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteRestaurant(restaurant.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
